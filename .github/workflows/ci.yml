@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Install PCB shared BOM
+        run: |
+          git clone --branch v$(grep -oP '(?<=<pcb-common.version>)[^<]+' pom.xml) https://github.com/defense-factory/pcb-common /tmp/pcb-common && mvn -B -f /tmp/pcb-common install
+      - run: mvn -B test

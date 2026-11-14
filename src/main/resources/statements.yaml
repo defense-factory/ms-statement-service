@@ -1,0 +1,10 @@
+account-1001:
+  accountId: account-1001
+  period: "2026-10"
+  currency: CAD
+  closingBalance: 1250.75
+account-1002:
+  accountId: account-1002
+  period: "2026-10"
+  currency: CAD
+  closingBalance: 0.00
