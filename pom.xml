@@ -14,7 +14,8 @@
     <version>1.0.0</version>
     <properties>
         <java.version>17</java.version>
-        <pcb-common.version>1.0.0</pcb-common.version>
+        <pcb-common.version>1.1.0</pcb-common.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
     </properties>
     <dependencyManagement>
         <dependencies>
